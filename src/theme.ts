@@ -11,6 +11,10 @@ export default extendTheme({
   },
   colors: {
     primary:'rgb(255,255,255)',
-    secondary:'rgb(28,27,27)',
+    secondary:'rgb(31,30,30)',
+    tertiary: 'rgb(166,55,52)',
     },
+  fonts: {
+    primary: "'Secular One', sans-serif"
+  }
   });
