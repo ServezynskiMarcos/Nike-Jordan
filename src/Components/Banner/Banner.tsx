@@ -1,27 +1,27 @@
 import { HStack, Image, Stack, Text, VStack } from "@chakra-ui/react";
-import jordan4L from "../Assets/jordan4L.png";
-import jordan4R from "../Assets/jordan4R.png";
-import logo from "../Assets/jordan.svg";
-const Banner = () => {
+import logo from "../../Assets/jordan.svg";
+import jordan4L from "../../Assets/jordan4L.png";
+import jordan4R from "../../Assets/jordan4R.png";
+const Banner: React.FC = () => {
   return (
     <Stack spacing={32}>
       <Stack alignItems={"center"} w="100%" h="400px" spacing="12">
-        <Stack alignItems={"center"}>
+        <Stack alignItems={"center"} position='sticky' top='20px' zIndex={1}>
           <Image src={logo} alt="jordan" w={"66px"} marginTop={"50px"} />
         </Stack>
-        <Image
-          src={jordan4L}
-          height="750px"
-          width="750px"
-          position="absolute"
-          zIndex={2}
-        />
         <Image
           src={jordan4R}
           height="750px"
           width="750px"
           zIndex={1}
           position="absolute"
+        />
+        <Image
+          src={jordan4L}
+          height="750px"
+          width="750px"
+          position="absolute"
+          zIndex={2}
         />
       </Stack>
       <HStack align="center" justify="space-evenly">
