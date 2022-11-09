@@ -10,7 +10,7 @@ const History: React.FC = () => {
       alignItems="center"
     >
       <HStack height="100vh" alignItems={"flex-start"} justify="space-evenly">
-        <Text transform="rotate(90deg)" fontFamily="primary" mt="15px">
+        <Text transform="rotate(90deg)" fontFamily="primary" mt="15px" color="secondary">
           DESIGN
         </Text>
         <VStack align="start">
@@ -18,15 +18,15 @@ const History: React.FC = () => {
             src="https://static.nike.com/a/images/eubfb0av7xadvqf9e7yw/ajiv-design.jpg"
             w="700px"
           />
-          <Text as="i">1989</Text>
+          <Text as="i" color="secondary">1989</Text>
         </VStack>
-        <Text fontFamily="primary">1989</Text>
+        <Text fontFamily="primary" color="secondary">1989</Text>
         <VStack align="end">
           <Image
             src="https://static.nike.com/a/images/ghd93aywf3ko1tddcijc/ajiv-sketch.jpg"
             w="290"
           />
-          <Text as="i">Design</Text>
+          <Text as="i" color="secondary">Design</Text>
         </VStack>
       </HStack>
       <Box width="50%">

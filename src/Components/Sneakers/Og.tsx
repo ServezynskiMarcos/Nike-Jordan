@@ -20,8 +20,9 @@ const Og: React.FC = () => {
         minHeight="100vh"
         alignItems="center"
         ref={ref}
+        
       >
-        <GridItem textAlign="center" color="primary">
+        <GridItem textAlign="center" color="secondary">
           <Text fontFamily="primary" as="b" fontSize="4xl">
             OG
           </Text>
@@ -37,7 +38,7 @@ const Og: React.FC = () => {
           </HStack>
         </GridItem>
 
-        <GridItem color="primary">
+        <GridItem color="secondary">
           <VStack>
             <Image
               src="https://static.nike.com/a/images/2c13900f-3312-4255-a6dc-adb5a566d2e2/white-fire-red-black.png"
@@ -53,7 +54,7 @@ const Og: React.FC = () => {
           </VStack>
         </GridItem>
 
-        <GridItem color="primary">
+        <GridItem color="secondary">
           <VStack>
             <Image
               src="https://static.nike.com/a/images/ihzsudy2fn03muk24n33/air-jordan-iv-og-black-cement-grey.png"
@@ -69,7 +70,7 @@ const Og: React.FC = () => {
           </VStack>
         </GridItem>
 
-        <GridItem color="primary">
+        <GridItem color="secondary">
           <VStack>
             <Image
               src="https://static.nike.com/a/images/ud9mbcdjsrntvfsrfoxx/air-jordan-iv-og-off-white-military-blue-military-blue.png"

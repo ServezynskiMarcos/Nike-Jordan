@@ -27,21 +27,21 @@ const Unreleased: React.FC = () => {
             as="b"
             fontSize="4xl"
             align="center"
-            color="primary"
+            color="secondary"
           >
             UNRELEASED
           </Text>
           <HStack justify="space-evenly">
-            <Text transform="rotate(90deg)" fontSize="3xl" color="primary">
+            <Text transform="rotate(90deg)" fontSize="3xl" color="secondary">
               ②
             </Text>
-            <Text fontSize="12px" w={"150px"} color="primary">
+            <Text fontSize="12px" w={"150px"} color="secondary">
               We've unearthed two unreleased AJ IV's from the archive.
             </Text>
           </HStack>
         </GridItem>
 
-        <GridItem color="primary">
+        <GridItem color="secondary">
           <VStack>
             <Image
               src="https://static.nike.com/a/images/fe17d0f4-b724-4da2-b7b6-d19fc42f2671/olive-oiled-suede-flight-satin.png"
@@ -57,7 +57,7 @@ const Unreleased: React.FC = () => {
           </VStack>
         </GridItem>
 
-        <GridItem color="primary">
+        <GridItem color="secondary">
           <VStack>
             <Image
               src="https://static.nike.com/a/images/jyyvnijvphytwi5qhojj/black-red.png"

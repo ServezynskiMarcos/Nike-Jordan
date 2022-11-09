@@ -15,7 +15,8 @@ function App() {
       backgroundSize="cover"
       p={0}
       m={0}
-      bgColor="secondary"
+      bgColor="cuarter"
+      
     >
       <Container maxW="100%" backgroundImage={texture} backgroundSize="cover">
         <Banner />
