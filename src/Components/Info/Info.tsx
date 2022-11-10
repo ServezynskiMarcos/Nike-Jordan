@@ -6,7 +6,7 @@ const Info: React.FC = () => {
   const ref = useRef(null);
   const { inViewport } = useInViewport(ref, {});
   return (
-    <SlideFade in={inViewport} offsetY="300px">
+    <SlideFade in={inViewport} offsetY="190px">
       <Stack spacing={5} py="50px" mx="100px" ref={ref}>
         <Stack>
           <Text

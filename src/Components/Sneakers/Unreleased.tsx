@@ -10,9 +10,29 @@ import {
 } from "@chakra-ui/react";
 import { useInViewport } from "react-in-viewport";
 import { useRef } from "react";
+import { useCallback, useState } from "react";
+import ImageViewer from "react-simple-image-viewer";
+import { GalleryUnreleased } from "../../Assets/GalleryImg";
+
 const Unreleased: React.FC = () => {
   const ref = useRef(null);
   const { inViewport } = useInViewport(ref, {});
+
+  const [currentImage, setCurrentImage] = useState<number>(0);
+  const [viewerOpen, setViewerOpen] = useState<boolean>(false);
+
+  const openImage = useCallback((i: number) => {
+    setCurrentImage(i);
+    setViewerOpen(true);
+  }, []);
+
+  const closeImage = () => {
+    setCurrentImage(0);
+    setViewerOpen(false);
+  };
+  const images = GalleryUnreleased.map((e) => e.unreleased);
+
+
   return (
     <SlideFade in={inViewport} offsetY="400px">
       <Grid
@@ -41,12 +61,13 @@ const Unreleased: React.FC = () => {
           </HStack>
         </GridItem>
 
-        <GridItem color="secondary">
+        <GridItem color="secondary" cursor="pointer">
           <VStack>
             <Image
               src="https://static.nike.com/a/images/fe17d0f4-b724-4da2-b7b6-d19fc42f2671/olive-oiled-suede-flight-satin.png"
               w="250px"
               h={"1xl"}
+              onClick={() => openImage(0)}
             />
             <Text fontFamily="primary" fontSize="xs">
               1989
@@ -57,12 +78,13 @@ const Unreleased: React.FC = () => {
           </VStack>
         </GridItem>
 
-        <GridItem color="secondary">
+        <GridItem color="secondary" cursor="pointer">
           <VStack>
             <Image
               src="https://static.nike.com/a/images/jyyvnijvphytwi5qhojj/black-red.png"
               w="250px"
               h={"1xl"}
+              onClick={() => openImage(2)}
             />
             <Text fontFamily="primary" fontSize="xs">
               1989
@@ -73,6 +95,25 @@ const Unreleased: React.FC = () => {
           </VStack>
         </GridItem>
       </Grid>
+      {viewerOpen && (
+        <ImageViewer
+          src={images}
+          currentIndex={currentImage}
+          onClose={closeImage}
+          disableScroll={true}
+          backgroundStyle={{
+            backgroundColor: "rgba(209,209,209, 0.1)",
+            backdropFilter: " blur(5px)",
+            height: "100vh",
+            zIndex: 100,
+            width: "100%",
+            position: "relative",
+            top: "-650px",
+            padding: "140px"
+          }}
+          closeOnClickOutside={true}
+        />
+      )}
     </SlideFade>
   );
 };

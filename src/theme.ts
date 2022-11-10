@@ -13,7 +13,7 @@ export default extendTheme({
     primary:'rgb(255,255,255)',
     secondary:'rgb(31,30,30)',
     tertiary: 'rgb(166,55,52)',
-    cuarter: "rgb(213,213,213)"
+    cuarter: "rgb(209,209,209)"
     },
   fonts: {
     primary: "'Secular One', sans-serif"
