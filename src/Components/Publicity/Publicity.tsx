@@ -23,6 +23,7 @@ const Publicity: React.FC = () => {
             SHOP AIR JORDAN IV
           </Text>
           <Text color="primary">Available now on jordan.com</Text>
+          <a href="https://www.nike.com/w/mens-shoes-nik1zy7ok" target="_blank">
           <Button
             size="sm"
             colorScheme="blackAlpha"
@@ -30,7 +31,7 @@ const Publicity: React.FC = () => {
             style={{ marginTop: "20px", width: "150px" }}
           >
             SHOP
-          </Button>
+          </Button></a>
         </VStack>
       </Stack>
     </ScaleFade>
